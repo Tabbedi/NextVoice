@@ -1,0 +1,446 @@
+/* Globale stiler */
+* {
+  box-sizing: border-box; /* Sikrer at padding og border inkluderes i elementets totale bredde og høyde */
+}
+
+body {
+  margin: 0; /* Fjerner standard marginer */
+  font-family: Arial, Helvetica, sans-serif; /* Setter en standard skrifttype */
+  background-color: black;
+  justify-content: center;
+  
+}
+
+
+/*----------------------------HEADER-----------------------------*/
+
+/* Hovedheader-stil */
+.header {
+  overflow: hidden; /* Hindrer at innhold flyter utenfor headeren */
+  background-color: #000000; /* Setter bakgrunnsfarge til sort */
+  padding: 20px 10px; /* Gir padding rundt headeren */
+  display: flex; /* Bruker flexbox for å justere innholdet */
+  align-items: center; /* Sentrerer innholdet vertikalt */
+  justify-content: space-between; /* Fordeler elementene jevnt med plass imellom */
+}
+
+/* Stiler for lenker i headeren */
+.header a {
+  color: rgb(255, 255, 255); /* Setter tekstfargen til hvit */
+  text-align: center; /* Sentrerer teksten */
+  padding: 12px; /* Gir padding rundt teksten */
+  text-decoration: none; /* Fjerner understrek */
+  font-size: 18px; /* Setter fontstørrelse */
+  line-height: 25px; /* Gir høyde på linjen */
+  border-radius: 6px; /* Runder hjørnene */
+  border: 3px solid black; /* Gir en sort kantlinje */
+  margin-right: 10px; /* Gir avstand mellom knapper */
+}
+
+/* Fjerner margin for siste knapp */
+.header a:last-child {
+  margin-right: 0;
+}
+
+/* Spesiell stil for logoen */
+.header a.logo {
+  font-size: 25px; /* Gjør logo-teksten større */
+  font-weight: bold; /* Gjør logo-teksten fet */
+  margin-right: auto; /* Skyver logoen helt til venstre */
+}
+
+/* Hover-effekt for lenker */
+.header a:hover {
+  border: 3px solid white; /* Endrer tekstfargen til sort */
+  transition-duration: 0.2s; /* Legger til en overgangseffekt */
+}
+
+/* Aktiv lenke-stil */
+.header a.active {
+  border: 3px solid rgb(81, 157, 66); /* Setter en grønn kantlinje */
+  color: white; /* Setter tekstfarge til hvit */
+  background-color: black; /* Beholder bakgrunnen sort */
+}
+
+/* Hover-effekt for aktiv lenke */
+.header a.active:hover {
+  background-color: rgb(81, 157, 66); /* Endrer bakgrunnsfarge til grønn */
+  transition-duration: 0.2s; /* Legger til en overgangseffekt */
+}
+
+/* Stiler for høyre del av headeren */
+.header-right {
+  display: flex; /* Bruker flexbox for layout */
+  align-items: center; /* Sentrerer elementene vertikalt */
+  justify-content: flex-end; /* Plasserer elementene til høyre */
+}
+
+/* Responsiv design for skjermer mindre enn 500px */
+@media screen and (max-width: 500px) {
+  .header {
+    flex-wrap: wrap; /* Tillater innholdet å bryte til neste linje */
+  }
+
+  .header a {
+    flex: 1; /* Gjør knappene full bredde */
+    margin-right: 0; /* Fjerner høyremargin */
+    margin-bottom: 10px; /* Legger til avstand mellom rader */
+  }
+
+  .header-right {
+    flex-wrap: wrap; /* Tillater innholdet å bryte til neste linje */
+    justify-content: center; /* Sentrerer elementene */
+  }
+}
+
+  
+  /*---------------------------Søkebar styling-----------------------------*/
+  
+  /* Search bar styling */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex: 2;
+  }
+  
+  .search-bar input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    color: white;
+  }
+  
+  .search-bar button {
+    background-color: rgb(81, 157, 66);
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+  }
+  
+  .search-bar button img {
+    width: 18px;
+    height: 18px;
+    background: transparent;
+  }
+  
+  .search-bar button:hover {
+    background-color: rgb(53, 111, 40);
+    transition-duration: 0.2s;
+  }
+  
+/*----------------------------------------------------*/
+
+/* Bilde for frontskjermen */
+  
+.image-container {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background-image: url('/Bilder/Conference.jpg'); /* Sett ditt eget bilde her */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: transparent;
+}
+
+.text-overlay h1 {
+  font-size: 2rem;
+  background-color: transparent;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.8);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+ margin: 0;
+}
+
+.text-overlay p {
+  font-size: 1.5rem;
+  margin: 10px 0 0;
+  font-weight: 300;
+  background-color:transparent;
+}
+
+.quote-icon {
+  font-size: 2rem; /* Juster størrelsen */
+  color: white;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+  position: relative; 
+  top: -0.1em; /* Juster vertikal posisjon */
+  margin-right: 0.3em; /* Avstand mellom sitatsymbol og tekst */
+  background-color: transparent;
+  font-size: 4rem;
+}
+
+hr.sitat {
+  border-top: 2px solid white;
+  border-bottom: 2px solid #1f1209;
+	box-shadow: 0 10px 10px -10px #000000;
+  width: 25vw;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.8);
+}
+
+/*----------------------------------------------------*/
+
+/* Container for all the tjeneste elements */
+.tjenester-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line */
+  justify-content: space-around; /* Evenly spaces items */
+  align-items: center;
+  gap: 20px; /* Adds space between items */
+  padding: 20px;
+  z-index: 2;
+}
+
+/* Individual tjeneste element */
+.tjenester {
+  display: flex;
+  flex-direction: column; /* Stacks the image and text vertically */
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px; /* Adjust the size */
+  height: auto;
+  text-align: center; /* Centers the text */
+  transition: transform 0.3s ease; /* Adds hover effect */
+}
+
+/* Hover effect for tjenester */
+.tjenester:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+}
+
+/* Image inside tjeneste */
+.tjenester img {
+  width: 45px; /* Adjust size for small round image */
+  height: 45px;
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures proper scaling */
+  margin-bottom: 20px; /* Adds spacing below the image */
+}
+
+/* Title text styling */
+.tjenester .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0; /* Removes default margin */
+  color: white; /* Text color */
+}
+
+/* Description text styling */
+.tjenester .description {
+  font-size: 14px;
+  margin: 20px 0 0; /* Adds some spacing above */
+  color: rgb(194, 190, 190); /* Slightly lighter text */
+}
+
+
+@media screen and (max-width: 500px) {
+  .header {
+    flex-direction: column; /* Endrer layouten til kolonne */
+    align-items: center; /* Sentrerer innholdet */
+  }
+
+  .header a {
+    display: block; /* Gjør knappene til blokkelementer */
+    width: 100%; /* Gjør knappene full bredde */
+    margin: 5px 0; /* Legger til avstand mellom knappene */
+    text-align: center; /* Sentrerer teksten */
+  }
+
+  .header-right {
+    display: flex; /* Fortsatt flexbox for layout */
+    flex-direction: column; /* Gjør kolonneoppsett for knappene */
+    align-items: center; /* Sentrerer knappene */
+    width: 100%; /* Gir bredde til kolonnen */
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .header a.active {
+    background-color: rgb(81, 157, 66);
+}
+  .search-bar{
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+
+  .text-overlay h1 {
+    font-size: 30px;
+  }
+
+}
+
+/*-------------------BOOk NÅ knapp----------------------*/
+
+.book b {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px; /* Fully rounded edges */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book b:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly larger */
+}
+
+/*-------------------Tekst Andel----------------------*/
+
+.tekst-boks {
+  display: flex; /* Make the container a flexbox */
+  justify-content: center; /* Center the .tekst horizontally */
+  align-items: center; /* Center the .tekst vertically */
+  height: 70vh; /* Make the container take up the full viewport height */
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.tekst {
+  padding: 10px;
+  display: flex;
+  color: white;
+  justify-content: center; /* Center content inside the flexbox */
+  align-items: center; /* Center content inside the flexbox */
+  width: 500px; /* Box width */
+  height: 400px; /* Box height */
+  font-size: 20px;
+  margin: 20px;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  transition: transform 0.3s ease; /* Adds hover effect */
+}
+
+.tekst:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+.container {
+  width: 80vw;
+  max-width: 2000px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+}
+
+.container2{
+width: 80vw;
+max-width: 2000px;
+background: white;
+border-radius: 20px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 60vh;
+}
+h2 {
+  margin-bottom: 20px;
+}
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; /* To allow for smooth sliding */
+}
+.card {
+  flex: 1 0 25%;
+  max-width: 24%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain; /* Ensures the full image is visible */
+  border-radius: 10px;
+  background: white; /* Helps if images have transparent backgrounds */
+}
+
+.card h3 {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+.card p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+} 
