@@ -1,0 +1,249 @@
+/* Globale stiler */
+* {
+    box-sizing: border-box; /* Sikrer at padding og border inkluderes i elementets totale bredde og høyde */
+}
+
+body {
+    margin: 0; /* Fjerner standard marginer */
+    font-family: Arial, Helvetica, sans-serif; /* Setter en standard skrifttype */
+    background-color: black;
+    justify-content: center;
+    background-image: url('../Bilder/ConferenceSeats.jpg'); 
+    background-size: cover; /* Passer på at bilde fitter hele skjermen */
+    background-attachment: fixed; /* Bildet står stille når du blar */
+    background-position: center; /* Bildet er i midten av skjermen */
+    background-repeat: no-repeat; /* Bildet dobles ikke */
+}
+/*----------------------------HEADER-----------------------------*/
+
+/* Hovedheader-stil */
+.header {
+  overflow: hidden; /* Hindrer at innhold flyter utenfor headeren */
+  background-color: #000000; /* Setter bakgrunnsfarge til sort */
+  padding: 20px 10px; /* Gir padding rundt headeren */
+  display: flex; /* Bruker flexbox for å justere innholdet */
+  align-items: center; /* Sentrerer innholdet vertikalt */
+  justify-content: space-between; /* Fordeler elementene jevnt med plass imellom */
+}
+
+/* Stiler for lenker i headeren */
+.header a {
+  color: rgb(255, 255, 255); /* Setter tekstfargen til hvit */
+  text-align: center; /* Sentrerer teksten */
+  padding: 12px; /* Gir padding rundt teksten */
+  text-decoration: none; /* Fjerner understrek */
+  font-size: 18px; /* Setter fontstørrelse */
+  line-height: 25px; /* Gir høyde på linjen */
+  border-radius: 6px; /* Runder hjørnene */
+  border: 3px solid black; /* Gir en sort kantlinje */
+  margin-right: 10px; /* Gir avstand mellom knapper */
+}
+
+/* Fjerner margin for siste knapp */
+.header a:last-child {
+  margin-right: 0;
+}
+
+/* Spesiell stil for logoen */
+.header a.logo {
+  font-size: 25px; /* Gjør logo-teksten større */
+  font-weight: bold; /* Gjør logo-teksten fet */
+  margin-right: auto; /* Skyver logoen helt til venstre */
+}
+
+/* Hover-effekt for lenker */
+.header a:hover {
+  border: 3px solid white; /* Endrer tekstfargen til sort */
+  transition-duration: 0.2s; /* Legger til en overgangseffekt */
+}
+
+/* Aktiv lenke-stil */
+.header a.active {
+  border: 3px solid rgb(81, 157, 66); /* Setter en grønn kantlinje */
+  color: white; /* Setter tekstfarge til hvit */
+  background-color: black; /* Beholder bakgrunnen sort */
+}
+
+/* Hover-effekt for aktiv lenke */
+.header a.active:hover {
+  background-color: rgb(81, 157, 66); /* Endrer bakgrunnsfarge til grønn */
+  transition-duration: 0.2s; /* Legger til en overgangseffekt */
+}
+
+/* Stiler for høyre del av headeren */
+.header-right {
+  display: flex; /* Bruker flexbox for layout */
+  align-items: center; /* Sentrerer elementene vertikalt */
+  justify-content: flex-end; /* Plasserer elementene til høyre */
+}
+
+/* Responsiv design for skjermer mindre enn 500px */
+@media screen and (max-width: 500px) {
+  .header {
+      flex-wrap: wrap; /* Tillater innholdet å bryte til neste linje */
+      flex-direction: column; /* Endrer layouten til kolonne */
+      align-items: center; /* Sentrerer innholdet */
+  }
+
+  .header a {
+      flex: 1; /* Gjør knappene full bredde */
+      margin-right: 0; /* Fjerner høyremargin */
+      margin-bottom: 10px; /* Legger til avstand mellom rader */
+      display: block; /* Gjør knappene til blokkelementer */
+      width: 100%; /* Gjør knappene full bredde */
+      text-align: center; /* Sentrerer teksten */
+  }
+
+  .header-right {
+      flex-wrap: wrap; /* Tillater innholdet å bryte til neste linje */
+      justify-content: center; /* Sentrerer elementene */
+      flex-direction: column; /* Kolonneoppsett */
+      align-items: center; /* Sentrerer knappene */
+      width: 100%; /* Gir bredde til kolonnen */
+  }
+
+  .search-bar {
+      margin-bottom: 30px; /* Setter marginen under søkebaren */
+      margin-top: 10px; /* Setter marginen over søkebaren */
+      width: 100%; /* Sørger for at søkebaren tar hele bredden */
+      display: flex; /* Bruker flexbox for layout */
+      justify-content: center; /* Sentrerer søkebaren horisontalt */
+  }
+
+  .search-bar input {
+      width: 100%; /* Sørger for at input-feltet tar opp hele bredden av .search-bar */
+      padding: 10px; /* Gir padding til input-feltet */
+      font-size: 16px; /* Setter skriftstørrelse */
+      border-radius: 6px; /* Runder hjørnene på input-feltet */
+      border: 2px solid #ccc; /* Gir en lys kant rundt input-feltet */
+  }
+
+  .header a.active {
+      background-color: rgb(81, 157, 66); /* Grønn bakgrunn for aktiv lenke */
+  }
+
+  body .tekst {
+      width: 100vw !important; /* Force full width */
+      max-width: 100vw !important; /* Remove restrictions */
+      margin: 0 !important; /* Reset margins */
+      padding: 10px !important; /* Adjust padding */
+      box-sizing: border-box !important; /* Include padding in width */
+      font-size: 20px;
+    }
+  }
+  
+
+  
+  /*---------------------------Søkebar styling-----------------------------*/
+  
+  /* Search bar styling */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex: 2;
+  }
+  
+  .search-bar input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    color: white;
+  }
+  
+  .search-bar button {
+    background-color: rgb(81, 157, 66);
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+  }
+  
+  .search-bar button img {
+    width: 18px;
+    height: 18px;
+    background: transparent;
+  }
+  
+  .search-bar button:hover {
+    background-color: rgb(53, 111, 40);
+    transition-duration: 0.2s;
+  }
+    /*---------------------------BODY-----------------------------*/
+
+    .tekstboks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto; /* Adjust height based on content */
+      margin-top: 100px; /* Ensure it starts below the header */
+      padding: 20px; /* Add some spacing inside the container */
+      position: relative; /* Keep it in the document flow */
+    }
+    
+    .tekst {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+      color: white;
+      border-radius: 8px;
+      width: 70%;
+      max-width: 800px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.6;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    }
+    
+
+
+    .boldtekst{
+      font-weight: bold;
+    }
+    
+    .tekst ul {
+      margin-top: 10px; /* Add space between the text and the list */
+      padding-left: 40px; /* Add indentation for the bullet points */
+    }
+    
+    .tekst li {
+      margin-bottom: 10px; /* Add spacing between each bullet point */
+    }
+    
+    .dropdown-btn {
+      background-color: #444; /* Mørk bakgrunn for knappen */
+      color: white;
+      padding: 10px 15px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      border-radius: 5px;
+      margin-bottom: 5px;
+  }
+  
+  .dropdown-btn:hover {
+      background-color: #555;
+  }
+  
+  .dropdown-content {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+  }
+  
+  .dropdown-content ul {
+      list-style-type: none;
+      padding-left: 0;
+  }
+  
+  .dropdown-content li {
+      margin-bottom: 10px;
+  }
+  

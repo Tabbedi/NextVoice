@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/indexCSS.css">
+</head>
+<body>
+    <header>
+        <!-------------------Header---------------------->
+        <div class="header">
+            <a href="index.html" class="logo">NextVoice</a>
+            
+            <!-- Søkebar -->
+            <div class="search-bar">
+  0              <input type="text" placeholder="Search..." />
+                <button type="submit">
+                    <img src="Bilder/SøkKnapp.png" alt="Search" />
+                </button>
+            </div>
+
+            <div class="header-right">
+                <a class="active" href="index.html">Hjem</a>
+                <a href="HTML/OmOss.html">Om oss</a>
+                <a href="HTML/Tjenester.html ">Våre Tjenester</a>
+                <a href="HTML/Nextvoices.html">Våre Nextvoices</a>
+                <a href="HTML/KontaktOss.html">Kontakt oss</a>
+            
+            </div>
+        </div>
+    </header>
+
+    <div class="image-container">
+        <img src="Bilder/Conference.jpg" alt="Cover Image" draggable="false">
+        <div class="text-overlay">
+            <h1>
+                <span class="quote-icon">“</span>Sammen skaper vi opplevelser som inspirerer, engasjerer og varer livet ut.
+            </h1>
+            <hr class="sitat">
+            <p>Jensen</p>
+
+            <div class="book">
+              <b href="#book">Book nå</b>
+            </div>
+        </div>
+        
+       
+      </div>
+
+      <div class="tjenester-container">
+        <div class="tjenester">
+          <img src="Bilder/Tjeneste1.png" alt="Tjeneste 1">
+          <p class="title">Inspirerende foredrag</p>
+          <p class="description">Engasjerende og motiverende foredrag som vekker idéer, utfordrer perspektiver og gir ny inspirasjon.</p>
+        </div>
+
+        <div class="tjenester">
+            <img src="Bilder/Tjeneste2.png" alt="Tjeneste 2">
+            <p class="title">Interaktive workshops</p>
+            <p class="description">Praktiske og engasjerende workshops hvor deltakerne lærer gjennom samarbeid, kreativitet og dialog.</p>
+          </div>
+
+          <div class="tjenester">
+            <img src="Bilder/Tjeneste3.png" alt="Tjeneste 3">
+            <p class="title">Strategisk rådgivning</p>
+            <p class="description">Skreddersydd strategisk veiledning for å hjelpe deg med å nå dine mål og utnytte mulighetene i markedet.</p>
+          </div>
+
+          <div class="tjenester">
+            <img src="Bilder/Tjeneste4.png" alt="Tjeneste 4">
+            <p class="title">Kreativ markedsføring</p>
+            <p class="description">Innovative og effektive markedsføringsløsninger som skaper oppmerksomhet og bygger varige relasjoner.</p>
+          </div>
+
+          <div class="tjenester">
+            <img src="Bilder/Tjeneste5.png" alt="Tjeneste 5">
+            <p class="title">Uforglemmelig underholdning</p>
+            <p class="description">Unike og minneverdige opplevelser som skaper glede, samhold og varig inntrykk.</p>
+          </div>
+      </div>
+
+      <div class="outer-container">
+        <div class="container">
+            <h2>Våre anbefalte foredragsholdere</h2>
+            <div class="carousel">
+                <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+                <div class="carousel-inner" id="carouselInner"></div>
+                <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+      <div class="tekst-boks">
+        <div class="tekst">
+          Next Voice leverer foredrag, workshops, markedsføring, rådgivning og underholdning som løfter ditt arrangement eller din bedrift til nye høyder. <br><br>
+          Enten du ønsker å skape uforglemmelige opplevelser for ditt publikum eller utvikle strategiske løsninger for å nå dine mål, gjør vi det enkelt og profesjonelt. <br><br>
+          Fra engasjerende talere og dyktige konferansierer til kreative markedsførere og underholdning som begeistrer – vi sørger for at ditt arrangement eller prosjekt blir en suksess.
+
+        </div>
+
+        <div class="tekst">
+          <img src="Bilder/PublicSpeaker.jpg" alt="Public Speaker" width="95%">
+        </div>
+      </div>
+      <script src="JS/IndexJS.js"></script>
+</body>
+</html>
