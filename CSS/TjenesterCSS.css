@@ -171,3 +171,9 @@ body {
     background-color: rgb(53, 111, 40);
     transition-duration: 0.2s;
   }
+
+
+  .tekst{
+    color: white;
+    font-size: 30px;
+  }

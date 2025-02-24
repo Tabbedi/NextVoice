@@ -298,7 +298,7 @@ hr.sitat {
 
 /*-------------------BOOk NÅ knapp----------------------*/
 
-.book b {
+.book a {
   margin-top: 40px;
   display: inline-block;
   padding: 20px 40px;
@@ -313,7 +313,7 @@ hr.sitat {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.book b:hover {
+.book a:hover {
   background-color: #218838; /* Darker green on hover */
   transform: scale(1.05); /* Slightly larger */
 }
