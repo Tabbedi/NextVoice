@@ -1,6 +1,7 @@
 /* Globale stiler */
 * {
   box-sizing: border-box; /* Sikrer at padding og border inkluderes i elementets totale bredde og høyde */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -151,7 +152,7 @@ body {
 
 .text-overlay {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -258,44 +259,6 @@ hr.sitat {
 }
 
 
-@media screen and (max-width: 500px) {
-  .header {
-    flex-direction: column; /* Endrer layouten til kolonne */
-    align-items: center; /* Sentrerer innholdet */
-  }
-
-  .header a {
-    display: block; /* Gjør knappene til blokkelementer */
-    width: 100%; /* Gjør knappene full bredde */
-    margin: 5px 0; /* Legger til avstand mellom knappene */
-    text-align: center; /* Sentrerer teksten */
-  }
-
-  .header-right {
-    display: flex; /* Fortsatt flexbox for layout */
-    flex-direction: column; /* Gjør kolonneoppsett for knappene */
-    align-items: center; /* Sentrerer knappene */
-    width: 100%; /* Gir bredde til kolonnen */
-  }
-
-  .search-bar input {
-    width: 100%;
-  }
-
-  .header a.active {
-    background-color: rgb(81, 157, 66);
-}
-  .search-bar{
-    margin-bottom: 30px;
-    margin-top: 10px;
-  }
-
-  .text-overlay h1 {
-    font-size: 30px;
-  }
-
-}
-
 /*-------------------BOOk NÅ knapp----------------------*/
 
 .book a {
@@ -363,31 +326,24 @@ hr.sitat {
   max-width: 2000px;
   background: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   height: 70vh;
 }
 
-.container2{
-width: 80vw;
-max-width: 2000px;
-background: white;
-border-radius: 20px;
-padding: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 60vh;
+.container > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures both left and right are aligned */
+  width: 100%;
+  background-color: white;
 }
-h2 {
-  margin-bottom: 20px;
-}
+
+
 .carousel {
   display: flex;
   overflow: hidden;
@@ -395,14 +351,17 @@ h2 {
   width: 100%;
   height: 100%;
 }
+
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 300%; /* To allow for smooth sliding */
+  
 }
+
 .card {
-  flex: 1 0 25%;
-  max-width: 24%;
+  flex: 0 0 25%; /* Hver kort tar 25% av bredden */
+  max-width: 25%; /* Maksimal bredde per kort for å vise 4 */
   padding: 10px;
   box-sizing: border-box;
   display: flex;
@@ -411,7 +370,7 @@ h2 {
 }
 .card img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: contain; /* Ensures the full image is visible */
   border-radius: 10px;
   background: white; /* Helps if images have transparent backgrounds */
@@ -437,6 +396,7 @@ h2 {
   cursor: pointer;
   font-size: 18px;
   border-radius: 10px;
+  z-index: 10;
 }
 .prev {
   left: 10px;
@@ -444,3 +404,62 @@ h2 {
 .next {
   right: 10px;
 } 
+
+
+
+
+
+
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .header {
+    flex-direction: column; /* Endrer layouten til kolonne */
+    align-items: center; /* Sentrerer innholdet */
+  }
+
+  .header a {
+    display: block; /* Gjør knappene til blokkelementer */
+    width: 100%; /* Gjør knappene full bredde */
+    margin: 5px 0; /* Legger til avstand mellom knappene */
+    text-align: center; /* Sentrerer teksten */
+  }
+
+  .header-right {
+    display: flex; /* Fortsatt flexbox for layout */
+    flex-direction: column; /* Gjør kolonneoppsett for knappene */
+    align-items: center; /* Sentrerer knappene */
+    width: 100%; /* Gir bredde til kolonnen */
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .header a.active {
+    background-color: rgb(81, 157, 66);
+}
+  .search-bar{
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+
+  .text-overlay h1 {
+    font-size: 30px;
+  }
+
+.outer-container{
+  display: none;
+}
+
+
+}

@@ -1,12 +1,12 @@
 /* Globale stiler */
 * {
     box-sizing: border-box; /* Sikrer at padding og border inkluderes i elementets totale bredde og høyde */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
     margin: 0; /* Fjerner standard marginer */
     font-family: Arial, Helvetica, sans-serif; /* Setter en standard skrifttype */
-    background-color: black;
     justify-content: center;
 
 }
@@ -20,6 +20,7 @@ body {
   display: flex; /* Bruker flexbox for å justere innholdet */
   align-items: center; /* Sentrerer innholdet vertikalt */
   justify-content: space-between; /* Fordeler elementene jevnt med plass imellom */
+  margin-bottom: 40px;
 }
 
 /* Stiler for lenker i headeren */
@@ -207,7 +208,7 @@ body {
     background: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -222,7 +223,7 @@ body {
     width: 45vw;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.7);
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -231,7 +232,7 @@ body {
     background-size: cover; /* Scales the image to fit */
     background-position: center; /* Centers the image */
     margin-top: 100px;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
 
@@ -240,7 +241,7 @@ h1 {
   margin-bottom: 30px;
   margin-top: 80px;
   font-size: 40px;
-  color: white;
+  color: black;
 }
 
 h2 {
@@ -251,23 +252,26 @@ h2 {
 .kontaktBeskrivelse {
     font-size: 17px;
     margin-bottom: 20px;
+    max-width: 80vh;
 }
 
 .BeskrivelsesTekst {
   font-size: 18px;
-  color: white;
+  color: black;
 }
 
 .stortekst1 {
-    font-size: 25       px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .mellomtekst1 {
-    font-size: 19px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 40px;
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 50px;
+    margin-top: 10px;
 }
 
 

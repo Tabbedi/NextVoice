@@ -1,47 +1,47 @@
-const speakers = [
-    { name: "Ola Nordmann", img: "Bilder/Portrett/Portrett1.jpg", desc: "Ekspert på innovasjon" },
-    { name: "Kari Nordmann", img: "Bilder/Portrett/Portrett2.jpg", desc: "Leder og motivator" },
-    { name: "Per Hansen", img: "Bilder/Portrett/Portrett3.jpg", desc: "Teknologientusiast" },
-    { name: "Anne Olsen", img: "Bilder/Portrett/Portrett4.jpg", desc: "Forfatter og foredragsholder" },
-    { name: "Jens Pettersen", img: "Bilder/Portrett/Portrett5.jpg", desc: "Markedsføringsekspert" },
-    { name: "Elise Johansen", img: "Bilder/Portrett/Portrett6.jpg", desc: "HR og teamutvikling" },
-    { name: "Marius Berg", img: "Bilder/Portrett/Portrett7.jpg", desc: "Økonom og analytiker" },
-    { name: "Ingrid Solberg", img: "Bilder/Portrett/Portrett8.jpg", desc: "Bærekraft og miljø" },
-    { name: "Thomas Dahl", img: "Bilder/Portrett/Portrett9.jpg", desc: "Strategi og ledelse" },
-    { name: "Hanne Kristiansen", img: "Bilder/Portrett/Portrett10.jpg", desc: "Kultur og kommunikasjon" },
-    { name: "Erik Nilsen", img: "Bilder/Portrett/Portrett11.jpg", desc: "IT-sikkerhet" },
-    { name: "Erik Nilsen", img: "Bilder/Portrett/Portrett11.jpg", desc: "IT-sikkerhet" },
-    
-];
-
-let index = 0;
-const itemsPerPage = 4;
-const totalSlides = Math.ceil(speakers.length / itemsPerPage);
 const carouselInner = document.getElementById("carouselInner");
 
-function renderCarousel() {
-    carouselInner.innerHTML = "";
-    carouselInner.style.transform = `translateX(-${index * 100}%)`;
-    for (const speaker of speakers) {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.innerHTML = `
-            <img src="${speaker.img}" alt="${speaker.name}">
-            <h3>${speaker.name}</h3>
-            <p>${speaker.desc}</p>
-        `;
-        carouselInner.appendChild(card);
-    }
-}
+const speakers = [
+  { name: "Person 1", img: "Bilder/Portrett/Portrett1.jpg", desc: "Beskrivelse 1" },
+  { name: "Person 2", img: "Bilder/Portrett/Portrett2.jpg", desc: "Beskrivelse 2" },
+  { name: "Person 3", img: "Bilder/Portrett/Portrett3.jpg", desc: "Beskrivelse 3" },
+  { name: "Person 4", img: "Bilder/Portrett/Portrett4.jpg", desc: "Beskrivelse 4" },
+  { name: "Person 5", img: "Bilder/Portrett/Portrett5.jpg", desc: "Beskrivelse 5" },
+  { name: "Person 6", img: "Bilder/Portrett/Portrett6.jpg", desc: "Beskrivelse 6" },
+  { name: "Person 7", img: "Bilder/Portrett/Portrett7.jpg", desc: "Beskrivelse 7" },
+  { name: "Person 8", img: "Bilder/Portrett/Portrett8.jpg", desc: "Beskrivelse 8" },
+];
+
+speakers.forEach((speaker) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.innerHTML = `
+    <img src="${speaker.img}" alt="${speaker.name}">
+    <h3>${speaker.name}</h3>
+    <p>${speaker.desc}</p>
+  `;
+  carouselInner.appendChild(card);
+});
+
+let currentIndex = 0;
 
 function nextSlide() {
-    index = (index + 1) % totalSlides;
-    renderCarousel();
+  currentIndex++;
+  if (currentIndex >= speakers.length - 3) { // -3 fordi vi viser 4 kort
+    currentIndex = 0; // Gå tilbake til første kort
+  }
+  updateCarousel();
 }
 
 function prevSlide() {
-    index = (index - 1 + totalSlides) % totalSlides;
-    renderCarousel();
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = speakers.length - 4; // Gå til siste set av 4 kort
+  }
+  updateCarousel();
 }
 
-renderCarousel();
+function updateCarousel() {
+  const cardWidth = document.querySelector(".card").offsetWidth;
+  carouselInner.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
