@@ -147,10 +147,10 @@ body {
     padding: 10px;
     font-size: 16px;
     border: 2px solid #ffffff;
-    background-color: transparent;
+    background-color: white;
     border-radius: 6px 0 0 6px;
     outline: none;
-    color: white;
+    color: black;
     
   }
   
@@ -347,6 +347,20 @@ button:hover {
   font-size: 14px;
   color: #777;
   flex-grow: 1;
+}
+
+.result-message {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Litt avstand fra resultatene */
+}
+
+.result-message h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
 }
 
 .category-badge {

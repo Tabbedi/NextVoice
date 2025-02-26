@@ -71,3 +71,42 @@ function selectCategory(button) {
     button.classList.add("selected");
     searchProfiles();
 }
+
+
+function searchProfiles() {
+    const searchInput = document.getElementById("main-search").value.trim().toLowerCase();
+    const searchResultsContainer = document.getElementById("search-results");
+    searchResultsContainer.innerHTML = ""; // Tøm søkeresultatene
+
+    const resultMessageContainer = document.createElement("div");
+    resultMessageContainer.classList.add("result-message");
+
+    if (searchInput === "") {
+        // Hvis søkefeltet er tomt, vises en melding for å oppfordre til å skrive noe
+        resultMessageContainer.innerHTML = "<h2>Vennligst skriv inn et søkeord.</h2>";
+        searchResultsContainer.appendChild(resultMessageContainer);
+        return;
+    }
+
+    const filteredProfiles = profiles.filter(profile =>
+        profile.name.toLowerCase().includes(searchInput) ||
+        profile.category.toLowerCase().includes(searchInput) ||
+        profile.description.toLowerCase().includes(searchInput)
+    );
+
+    if (filteredProfiles.length === 0) {
+        // Ingen resultater
+        resultMessageContainer.innerHTML = "<h2>Ingen resultater funnet.</h2>";
+    } else {
+        // Resultater funnet
+        resultMessageContainer.innerHTML = `<h2>Resultater (${filteredProfiles.length})</h2>`;
+        // Legg til de filtrerte resultatene som kort
+        filteredProfiles.forEach(profile => {
+            const card = createProfileCard(profile);
+            searchResultsContainer.appendChild(card);
+        });
+    }
+
+    // Legg resultatmeldingen til searchResultsContainer før profilene
+    searchResultsContainer.insertBefore(resultMessageContainer, searchResultsContainer.firstChild);
+}
