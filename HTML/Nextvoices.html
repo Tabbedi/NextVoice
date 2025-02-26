@@ -1,18 +1,17 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Våre Tjenester</title>
+    <title>Våre Nextvoices</title>
     <link rel="stylesheet" href="../CSS/NextvoicesCSS.css">
 </head>
 <body>
 
     <header>
-        <!-------------------Header---------------------->
         <div class="header">
             <a href="../index.html" class="logo">NextVoice</a>
             
-            <!-- Søkebar -->
             <div class="search-bar">
                 <input type="text" placeholder="Search..." />
                 <button type="submit">
@@ -26,38 +25,54 @@
                 <a href="../HTML/Tjenester.html">Våre Tjenester</a>
                 <a class="active" href="../HTML/Nextvoices.html">Våre Nextvoices</a>
                 <a href="../HTML/KontaktOss.html">Kontakt oss</a>
-            
             </div>
         </div>
     </header>
-
 
     <div class="outer-container">
         <div class="container">
             <h1>Våre Nextvoices</h1>
             <div class="VNtekst">
-                work in progress <br>
-            <br>
-            Våre next voices er  mer enn bare talere; de er endringsskapere, <br>
-            innovatører og historiefortellere. Med ulike bakgrunner, unike <br>
-            perspektiver og verdifulle erfaringer, bringer de inspirasjon og <br>
-            kunnskap til enhver arena. Utforsk profiler og finn stemmen som <br>
-            kan løfte ditt arrangement til nye høyder. 
+                Våre next voices er mer enn bare talere; de er endringsskapere, <br>
+                innovatører og historiefortellere. Med ulike bakgrunner, unike <br>
+                perspektiver og verdifulle erfaringer, bringer de inspirasjon og <br>
+                kunnskap til enhver arena. Utforsk profiler og finn stemmen som <br>
+                kan løfte ditt arrangement til nye høyder. 
             </div>
             
-            <div class="search-bar">
-                <input type="text" placeholder="Search..." />
-                <button type="submit">
-                    <img src="../Bilder/SøkKnapp.png" alt="Search" />
-                </button>
+            <div class="search-container">
+                <input type="text" id="main-search" placeholder="Søk etter Nextvoices...">
+                <button onclick="searchProfiles()">Søk</button>
+            </div>
+            
+            <div class="categories">
+                <button class="category" onclick="selectCategory(this)">Ledelse og teamutvikling</button>
+                <button class="category" onclick="selectCategory(this)">Markedsføringstrender</button>
+                <button class="category" onclick="selectCategory(this)">Teknologi og innovasjon</button>
+                <button class="category" onclick="selectCategory(this)">Mental helse på arbeidsplassen</button>
+                <button class="category" onclick="selectCategory(this)">Bærekraft i praksis</button>
+                <button class="category" onclick="selectCategory(this)">Kreativ problemløsning</button>
+                <button class="category" onclick="selectCategory(this)">Effektiv kommunikasjon</button>
+                <button class="category" onclick="selectCategory(this)">Digital strategi og innholdsproduksjon</button>
+                <button class="category" onclick="selectCategory(this)">Stressmestring og mindfulness</button>
+                <button class="category" onclick="selectCategory(this)">Ledelse i endringstider</button>
+                <button class="category" onclick="selectCategory(this)">Arrangementplanlegging</button>
+                <button class="category" onclick="selectCategory(this)">Markedsføringsstrategi</button>
+                <button class="category" onclick="selectCategory(this)">Bærekraft og sosialt ansvar</button>
+                <button class="category" onclick="selectCategory(this)">Sosiale mediekampanjer</button>
+                <button class="category" onclick="selectCategory(this)">Historiefortelling</button>
+                <button class="category" onclick="selectCategory(this)">Datadrevet strategi</button>
+                <button class="category" onclick="selectCategory(this)">DJ-er</button>
+                <button class="category" onclick="selectCategory(this)">Artister</button>
+                <button class="category" onclick="selectCategory(this)">Komikere</button>
             </div>
 
-            lag kategorier her
+            <div id="search-results">
+                <!-- Søkeresultater kommer her -->
+            </div>
         </div>
     </div>
 
-
-
-<script src="../JS/NextvoicesJS.js"></script>
+    <script src="../JS/NextvoicesJS.js"></script>
 </body>
 </html>
