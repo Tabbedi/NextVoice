@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Hent URL-parameteren (query)
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get("query"); // Vi bruker "query" som parameter i URL-en
+
+    // Hvis en query finnes, sett verdien i søkefeltet
+    if (query) {
+        document.getElementById("main-search").value = query;
+        searchProfiles(); // Kjør søket automatisk når query er tilgjengelig
+    }
+
+    // Last inn alle profiler ved start
+    loadAllProfiles();
+});
+
+// Profildata
 const profiles = [
     { 
         name: "Ola Nordmann", 
@@ -43,10 +59,7 @@ const profiles = [
     },
 ];
 
-
-// Last inn alle profiler ved start
-document.addEventListener("DOMContentLoaded", loadAllProfiles);
-
+// Last inn alle profiler
 function loadAllProfiles() {
     const allProfilesContainer = document.getElementById("all-profiles");
     allProfilesContainer.innerHTML = "";
@@ -69,7 +82,7 @@ function createProfileCard(profile) {
     return card;
 }
 
-
+// Kjør søk
 function searchProfiles() {
     const searchInput = document.getElementById("main-search").value.trim().toLowerCase();
     const selectedCategory = document.querySelector(".category.selected")?.textContent || null;
@@ -102,9 +115,6 @@ function searchProfiles() {
     searchResultsContainer.insertBefore(resultMessageContainer, searchResultsContainer.firstChild);
 }
 
-
-
-
 // Kjør søk når Enter trykkes i inputfeltet
 document.getElementById("main-search").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
@@ -120,3 +130,14 @@ function selectCategory(button) {
     button.classList.add("selected");
     searchProfiles(); // Sikrer at søket oppdateres når en kategori velges
 }
+
+// Håndter URL-parametere ved innsendelse av skjema
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from submitting normally
+    const query = document.querySelector("input[name='query']").value; // Get the query input
+    
+    // Append the query to the URL
+    const baseUrl = "../HTML/Nextvoices.html";
+    const newUrl = baseUrl + "?query=" + encodeURIComponent(query); // Append the query parameter
+    window.location.href = newUrl; // Redirect to the URL with the query parameter
+});

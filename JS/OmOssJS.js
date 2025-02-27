@@ -12,3 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from submitting normally
+    const query = document.querySelector("input[name='query']").value; // Get the query input
+    window.location.href = "../HTML/Nextvoices.html"; // Redirect to the fixed URL
+  });
