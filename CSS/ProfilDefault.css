@@ -5,8 +5,8 @@
 
 body {
     margin: 0; /* Fjerner standard marginer */
-    font-family: Arial, Helvetica, sans-serif; /* Setter en standard skrifttype */
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 /*----------------------------HEADER-----------------------------*/
@@ -111,7 +111,6 @@ body {
       width: 100%; /* Sørger for at input-feltet tar opp hele bredden av .search-bar */
       padding: 10px; /* Gir padding til input-feltet */
       font-size: 16px; /* Setter skriftstørrelse */
-      background-color: white;
       border-radius: 6px; /* Runder hjørnene på input-feltet */
       border: 2px solid #ccc; /* Gir en lys kant rundt input-feltet */
   }
@@ -132,9 +131,8 @@ body {
   
 
   
-  /*---------------------------Søkebar styling-----------------------------*/
+  /*---------------------------HEADERSØKEBAR, IKKE RØR-----------------------------*/
   
-  /* Search bar styling */
   /* Search bar styling */
   .search-bar {
     display: flex;
@@ -174,104 +172,3 @@ body {
     background-color: rgb(108, 108, 108);
     transition-duration: 0.2s;
   }
-
-
-
-  .outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 70vh;
-    margin-top: 12px;
-}
-
-
-.container-1{
-  width: 95vw;
-  max-width: 2000px;
-  background: rgb(130, 130, 130);
-  border-radius: 20px;
-  padding: 20px;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 70vh;
-  background-size: cover; /* Scales the image to fit */
-  background-position: center; /* Centers the image */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-
-
-h1 {
-  margin-bottom: 20px;
-  margin-top: 50px;
-  font-size: 40px;
-  color: white;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.beskrivelse-tekst {
-  font-size: 18px;
-  color: white;
-  max-width: 50%;
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
-
-.kontaktBeskrivelse {
-  font-size: 17px;
-  margin-bottom: 20px;
-  max-width: 80vh;
-}
-
-
-.stortekst1 {
-  font-size: 35px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-bottom: 40px;
-  margin-top: 20px;
-}
-
-.mellomtekst1 {
-  font-size: 17px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-bottom: 50px;
-  margin-top: 10px;
-}
-
-.mellomstor-tekst{
-  font-size: 20;
-  font-weight: bold;
-}
-
-
-
-
-.book a {
-  margin-top: 40px;
-  display: inline-block;
-  padding: 20px 40px;
-  background-color: 	rgb(24, 119, 242);
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  border: none;
-  border-radius: 50px; /* Fully rounded edges */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.book a:hover {
-  background-color: 	rgb(12, 92, 196);
-  transform: scale(1.05); /* Slightly larger */
-}

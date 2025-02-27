@@ -102,22 +102,6 @@ body {
       width: 100%; /* Gir bredde til kolonnen */
   }
 
-  .search-bar {
-      margin-bottom: 30px; /* Setter marginen under søkebaren */
-      margin-top: 10px; /* Setter marginen over søkebaren */
-      width: 100%; /* Sørger for at søkebaren tar hele bredden */
-      display: flex; /* Bruker flexbox for layout */
-      justify-content: center; /* Sentrerer søkebaren horisontalt */
-  }
-
-  .search-bar input {
-      width: 100%; /* Sørger for at input-feltet tar opp hele bredden av .search-bar */
-      padding: 10px; /* Gir padding til input-feltet */
-      font-size: 16px; /* Setter skriftstørrelse */
-      border-radius: 6px; /* Runder hjørnene på input-feltet */
-      border: 2px solid #ccc; /* Gir en lys kant rundt input-feltet */
-  }
-
 
   body .tekst {
       width: 100vw !important; /* Force full width */
@@ -134,6 +118,7 @@ body {
   /*---------------------------Søkebar styling-----------------------------*/
   
   /* Search bar styling */
+  /* Search bar styling */
   .search-bar {
     display: flex;
     align-items: center;
@@ -147,10 +132,10 @@ body {
     padding: 10px;
     font-size: 16px;
     border: 2px solid #ffffff;
-    background-color: transparent;
+    background-color: white;
     border-radius: 6px 0 0 6px;
     outline: none;
-    color: white;
+    color: black;
     
   }
   
@@ -172,6 +157,7 @@ body {
     background-color: rgb(108, 108, 108);
     transition-duration: 0.2s;
   }
+
   
 /*----------------------------------------------------*/
 

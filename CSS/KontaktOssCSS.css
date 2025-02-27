@@ -99,14 +99,6 @@ body {
       width: 100%; /* Gir bredde til kolonnen */
   }
 
-  .search-bar {
-      margin-bottom: 30px; /* Setter marginen under søkebaren */
-      margin-top: 10px; /* Setter marginen over søkebaren */
-      width: 100%; /* Sørger for at søkebaren tar hele bredden */
-      display: flex; /* Bruker flexbox for layout */
-      justify-content: center; /* Sentrerer søkebaren horisontalt */
-  }
-
   .search-bar input {
       width: 100%; /* Sørger for at input-feltet tar opp hele bredden av .search-bar */
       padding: 10px; /* Gir padding til input-feltet */
@@ -133,45 +125,46 @@ body {
   
   /*---------------------------Søkebar styling-----------------------------*/
   
-  /* Search bar styling */
-  .search-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    flex: 2;
-  }
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex: 2;
+}
+
+.search-bar input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ffffff;
+  background-color: white;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  color: black;
   
-  .search-bar input {
-    width: 50%;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ffffff;
-    background-color: transparent;
-    border-radius: 6px 0 0 6px;
-    outline: none;
-    color: white;
-    
-  }
-  
-  .search-bar button {
-    background-color: rgb(0, 0, 0);
-    border: none;
-    padding: 12px 15px;
-    cursor: pointer;
-    border-radius: 0 6px 6px 0;
-  }
-  
-  .search-bar button img {
-    width: 18px;
-    height: 18px;
-    background: transparent;
-  }
-  
-  .search-bar button:hover {
-    background-color: rgb(108, 108, 108);
-    transition-duration: 0.2s;
-  }
+}
+
+.search-bar button {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 15px;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+}
+
+.search-bar button img {
+  width: 18px;
+  height: 18px;
+  background: transparent;
+}
+
+.search-bar button:hover {
+  background-color: rgb(108, 108, 108);
+  transition-duration: 0.2s;
+}
+
 
 
 
