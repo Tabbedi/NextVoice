@@ -57,6 +57,13 @@ const profiles = [
         description: "Jobber med digitale kampanjer.", 
         link: "../HTML/ProfilDefault.html"
     },
+    { 
+        name: "Francine Mbanza Jensen", 
+        category: "Ledelse og teamutvikling", 
+        image: "../Bilder/Portrett/Francine7.jpg", 
+        description: "En sterk stemme for mangfoldet.", 
+        link: "../HTML/FrancineMbanzaJensen.html"
+    },
 ];
 
 // Last inn alle profiler
