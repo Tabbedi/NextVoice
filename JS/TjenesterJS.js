@@ -10,22 +10,8 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
 
 
 
-// JavaScript to toggle each dropdown
-const dropdownBtns = document.querySelectorAll('.dropdown-btn');
-
-dropdownBtns.forEach(btn => {
-  btn.addEventListener('click', function () {
-    const dropdownContent = this.nextElementSibling; // The associated content div
-
-    // Toggle the open class to activate the animation
-    dropdownContent.parentElement.classList.toggle('open');
-    
-    // Close all other dropdowns except the one clicked
-    const allDropdowns = document.querySelectorAll('.service-dropdown');
-    allDropdowns.forEach(dropdown => {
-      if (dropdown !== this.parentElement && dropdown.classList.contains('open')) {
-        dropdown.classList.remove('open');
-      }
-    });
-  });
-});
+  function toggleDropdown(index) {
+    let contents = document.querySelectorAll(".dropdown-content");
+    contents[index].style.display = 
+        contents[index].style.display === "block" ? "none" : "block";
+}

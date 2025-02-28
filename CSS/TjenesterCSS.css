@@ -184,7 +184,6 @@ body {
     width: 100%;
     height: auto;
     margin-top: 12px;
-    background-color: red;
 }
 
 
@@ -294,62 +293,28 @@ h2 {
 
 
 
-/* Container for all dropdowns */
-.dropdown-row {
-  display: flex; /* Use flex to align items vertically */
-  flex-direction: column; /* Stack items vertically */
-  width: 100%; /* Ensure the row takes up the full width of the container */
-  gap: 10px; /* Add some space between each button */
-  margin-bottom: 20px; /* Add margin below the dropdown row */
+.dropdown {
+  width: 95vw;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
-
-/* Dropdown container */
-.service-dropdown {
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: blue; /* Fjerner bakgrunnsfargen */
-  box-shadow: none; /* Fjerner eventuelle skygger rundt dropdown */
-}
-
-/* Dropdown button style */
-.dropdown-btn {
-  background-color: #808080; /* Gray background */
-  color: white;
-  padding: 20px;
-  width: 95vw; /* Sørger for at knappen fyller containeren */
-  font-size: 18px;
-  margin: 20px;
-  border: none;
-  text-align: left;
+.dropdown button {
+  width: 100%;
+  padding: 25px;
+  font-size: 20px;
   cursor: pointer;
-  border-radius: 20px; /* Rounded corners */
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-btn:hover {
-  background-color: #4a4a4a; /* Darker gray on hover */
-}
-
-/* Dropdown content style */
-.dropdown-content {
-  display: none; /* Initially hidden */
-  background-color: #6c6c6c; /* Slightly darker gray */
-  padding: 0 20px;
-  height: 0; /* Set height to 0 initially */
-  transition: height 0.3s ease-in-out; /* Smooth transition for opening/closing */
-}
-
-/* Show dropdown content when open */
-.service-dropdown.open .dropdown-content {
-  display: block;
-  height: auto; /* Allow content to expand */
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-/* Innholdet i dropdown */
-.dropdown-content p {
-  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007BFF;
   color: white;
-  font-size: 16px;
+  text-align: left;
+}
+.dropdown-content {
+  display: none;
+  overflow: hidden;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
 }
