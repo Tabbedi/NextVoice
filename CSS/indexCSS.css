@@ -6,7 +6,7 @@
 body {
   margin: 0; /* Fjerner standard marginer */
   justify-content: center;
-  background-color: orange;
+  background-color: #f8f8f8;
   
 }
 
@@ -169,7 +169,7 @@ body {
   background-image: url('/Bilder/Conference.jpg'); /* Sett ditt eget bilde her */
   background-color: black;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 

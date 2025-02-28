@@ -201,6 +201,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 70vh;
+  background-image: url(../Bilder/Tjenester.jpg);
   background-size: cover; /* Scales the image to fit */
   background-position: center; /* Centers the image */
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -278,6 +279,16 @@ h2 {
 
 
 
+.container-2 {
+  display: flex;
+  width: 40%;
+  height: 90%;
+  background-color: white;
+  border-radius: 10px;
+  background-image: url(../Bilder/Conference2.jpg); /* Your image path */
+  background-size: cover; /* Make the image cover the entire box */
+  background-position: center; /* Center the image */
+}
 
 
 
@@ -297,6 +308,16 @@ h2 {
   width: 95vw;
   display: flex;
   flex-direction: column;
+}
+
+.dropdown-inner {
+  display: flex;
+  align-items: flex-start;
+}
+
+.text-container {
+  flex: 1;
+  /* Optional: add padding or margin as needed */
 }
 
 .dropdown button {
@@ -333,6 +354,21 @@ h2 {
 }
 
 
+
+.image-container {
+  flex: 0 0 auto;
+  width: 40%; /* Adjust the width to your preference */
+  margin-left: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  height: 35vw;
+  object-fit: cover;
+  
+}
 
 
 .stor-tekst{

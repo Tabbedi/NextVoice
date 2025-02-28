@@ -308,6 +308,10 @@ button:hover {
   text-align: center;
 }
 
+.all-profiles-container h2{
+  color: black;
+}
+
 #all-profiles {
   display: flex;
   flex-wrap: wrap; /* Lar kortene gå til neste linje om nødvendig */
