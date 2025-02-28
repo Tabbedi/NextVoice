@@ -184,6 +184,7 @@ body {
     width: 100%;
     height: auto;
     margin-top: 12px;
+    margin-bottom: 40px;
 }
 
 
@@ -295,10 +296,10 @@ h2 {
 
 .dropdown {
   width: 95vw;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
+
 .dropdown button {
   width: 100%;
   padding: 25px;
@@ -309,7 +310,14 @@ h2 {
   background-color: #007BFF;
   color: white;
   text-align: left;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.dropdown button:hover{
+  background-color: rgb(12, 92, 196);
+}
+
+
 .dropdown-content {
   display: none;
   overflow: hidden;
@@ -317,4 +325,37 @@ h2 {
   padding: 10px;
   border-radius: 10px;
   margin-top: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.dropdown-content.open {
+  max-height: 500px;
+  padding: 10px;
+}
+
+
+
+
+.stor-tekst{
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+ }
+
+ .mellomstor-tekst{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-width: 70vw;
+ }
+
+ .mellom-tekst{
+  font-size: 17px;
+  margin-bottom: 30px;
+ }
+
+ .bold{
+  font-weight: bold;
+  margin-top: 10px;
+ }
