@@ -199,7 +199,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 70vh;
-  /*background-image: url('../Bilder/PublicSpeaker.jpg');*/
+  background-image: url('../Bilder/VåreNextvoices.JPG');
   background-size: cover; /* Scales the image to fit */
   background-position: center; /* Centers the image */
 }
@@ -275,7 +275,7 @@ button:hover {
 }
 
 .category {
-  background-color: #565656;
+  background-color: #565656 ;
   border: 1px solid #ccc;
   padding: 10px 20px;
   margin: 5px;
