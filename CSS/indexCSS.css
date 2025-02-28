@@ -319,7 +319,7 @@ hr.sitat {
   background-color: white;
 }
 
-.tekst {
+.tekst, .tekst2 {
   padding: 10px;
   display: flex;
   justify-content: center; /* Center content inside the flexbox */
@@ -332,6 +332,14 @@ hr.sitat {
   background-color: white;
   border-radius: 4px;
 }
+
+.tekst2{
+  border-radius: 10px;
+  background-image: url(../Bilder/PublicSpeaker.jpg); /* Your image path */
+  background-size: cover; /* Make the image cover the entire box */
+  background-position: center; /* Center the image */
+}
+
 
 
 
