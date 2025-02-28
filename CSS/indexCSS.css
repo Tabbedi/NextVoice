@@ -215,6 +215,15 @@ body {
   font-size: 4rem;
 }
 
+.quote-icon2 {
+  color: white;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+  position: relative; 
+  background-color: transparent;
+  font-size: 4rem;
+  top: 3rem;
+}
+
 hr.sitat {
   border-top: 2px solid white;
   border-bottom: 2px solid #1f1209;
@@ -271,7 +280,7 @@ hr.sitat {
 
 /* Title text styling */
 .tjenester .title {
-  font-size: 16px;
+  font-size: 19px;
   font-weight: bold;
   margin: 0; /* Removes default margin */
   color: white; /* Text color */
@@ -279,7 +288,7 @@ hr.sitat {
 
 /* Description text styling */
 .tjenester .description {
-  font-size: 14px;
+  font-size: 16px;
   margin: 20px 0 0; /* Adds some spacing above */
   color: rgb(255, 255, 255); /* Slightly lighter text */
 }
