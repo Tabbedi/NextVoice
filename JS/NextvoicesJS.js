@@ -20,35 +20,35 @@ const profiles = [
         category: "Ledelse og teamutvikling", 
         image: "../Bilder/Portrett/Portrett1.jpg", 
         description: "Erfaren leder og foredragsholder.", 
-        link: "../HTML/ProfilDefault.html"
+        link: "../HTML/Profil/ProfilDefault.html"
     },
     { 
         name: "Kari Hansen", 
         category: "Teknologi og innovasjon", 
         image: "../Bilder/Portrett/Portrett2.jpg", 
         description: "Ekspert på AI og digitalisering.", 
-        link: "../HTML/ProfilDefault.html"
+        link: "../HTML/Profil/ProfilDefault.html"
     },
     { 
         name: "Per Olsen", 
         category: "Markedsføringstrender", 
         image: "../Bilder/Portrett/Portrett3.jpg", 
         description: "Jobber med digitale kampanjer.", 
-        link: "../HTML/ProfilDefault.html"
+        link: "../HTML/Profil/ProfilDefault.html"
     },
     { 
         name: "Gert Trude", 
         category: "Bærekraft og sosialt ansvar", 
         image: "../Bilder/Portrett/Portrett4.jpg", 
         description: "Erfaren leder og foredragsholder.", 
-        link: "../HTML/ProfilDefault.html"
+        link: "../HTML/Profil/ProfilDefault.html"
     },
     { 
         name: "Helly Hansen", 
         category: "DJ", 
         image: "../Bilder/Portrett/Portrett5.jpg", 
         description: "Ekspert på AI og digitalisering.", 
-        link: "../HTML/ProfilDefault.html"
+        link: "../HTML/Profil/ProfilDefault.html"
     },
     { 
         name: "Kim Roger", 
@@ -62,8 +62,16 @@ const profiles = [
         category: "Ledelse og teamutvikling", 
         image: "../Bilder/Portrett/Francine7.jpg", 
         description: "En sterk stemme for mangfoldet.", 
-        link: "../HTML/FrancineMbanzaJensen.html"
+        link: "../HTML/Profil/FrancineMbanzaJensen.html"
     },
+    { 
+        name: "Øystein Thanh Nguyen", 
+        category: "Ledelse og teamutvikling", 
+        image: "../Bilder/Portrett/Øystein1.jpg", 
+        description: "Advokat og foredragsholder", 
+        link: "../HTML/Profil/ØysteinThanhNguyen.html"
+    },
+
 ];
 
 // Last inn alle profiler

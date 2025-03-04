@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfilNavn</title>
+    <link rel="stylesheet" href="../../CSS/ProfilDefault.css">
+</head>
+<body>
+
+    <header>
+        <!-------------------Header---------------------->
+        <div class="header">
+            <a href="../../index.html" class="logo">NextVoice</a>
+            
+            <!-- Søkebar -->
+            <form id="searchForm" action="../../HTML/Nextvoices.html" method="get" class="search-bar">
+                <input type="text" placeholder="Search..." name="query" />
+                <button type="submit">
+                    <img src="../../Bilder/SøkKnapp.png" alt="Search" />
+                </button>
+            </form>
+
+            <div class="header-right">
+                <a href="../../index.html">Hjem</a>
+                <a href="../../HTML/OmOss.html">Om oss</a>
+                <a href="../../HTML/Tjenester.html">Våre tjenester</a>
+                <a class="active" href="../../HTML/Nextvoices.html">Våre Nextvoices</a>
+                <a href="../../HTML/KontaktOss.html">Kontakt oss</a>
+            
+            </div>
+        </div>
+    </header>
+
+    <div class="outer-container1">
+        <div class="container-1"><div class="stor-tekst">Francine Mbanza Jensen</div>
+        <div class="mellomstor-tekst">En sterk stemme for mangfoldet.</div>
+
+
+
+            
+            <div class="mellom-tekst">
+                Francine Mbanza Jensen er grunnleggeren og daglig leder av Unity Spark, en katalysator for gründere 
+                med flerkulturell bakgrunn. Francine er samfunnsengasjert og brenner for mangfold i arbeidslivet på
+                 alle nivåer. Hennes fagekspertise er flerkulturelt entreprenørskap, bærekraft og regional utvikling.
+                  I 2023 vant Francine Bergen kommune sin likestillings- og mangfoldspris for sitt arbeid for å fremme 
+                  posisjoner til minoriteter, særlig minoritetskvinner i arbeidslivet.
+            </div>
+
+            <div class="mellom-tekst">
+                Dette er en dame som kan mye. I 2020 lanserte Francine tegneserien om den norsk-burundiske superhelten Kira.
+                 Hun har gitt ut hele fire tegneserier om superhelten med ulike tema. Francine er også spaltist i BA.
+            </div>
+
+            <div class="book">
+                <a href="#target-container" onclick="highlightContainer(event, 'target-container')">Kontakt Francine</a>
+            </div>
+
+            
+            </div>
+            
+            <div class="PortrettBilde" style="background-image: url('../../Bilder/Portrett/Francine7.jpg');"></div>
+    </div>
+
+<div class="outer-container2">
+    <div class="container-1">
+        <div class="mellomstor-tekst">Francine har foredrag om disse temaene</div>
+
+        
+        <div class="mellom-tekst">
+            Mangfoldsledelse <br>
+            Hvordan sikre mangfold i ledelse og i styrer <br>
+            Flerkulturelt entreprenørskap
+        </div>
+
+    <div class="mellomstor-tekst2">Slik kan vi hjelpe deg:</div> 
+        <div class="mellom-tekst"> • Få en oversikt over våre tjenester og tilpassede løsninger. <br>
+         • Be om anbefalinger for foredragsholdere, underholdere eller markedsførere. <br>
+         • Få råd om hvordan du kan gjøre arrangementet ditt til en suksess. 
+     </div>
+ 
+     <div class="bold">Ta <a href="../../HTML/KontaktOss.html">Kontakt</a> med oss i dag, så finner vi løsningen som passer for deg! </div>
+
+        <div class="phone-container">
+            <a href="tel:41147343" class="phone-link">
+                411 47 343
+                <img src="../../Bilder/Telefon(Svart).png" alt="Telefon ikon" class="phone-icon">
+            </a>
+        </div>
+
+    </div>
+
+
+    <div id="target-container" class="container-3">
+        <h2> Kontakt Francine Mbanza Jensen</h2>
+
+        <div class="content">
+            <!-- Registration form -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="8dc75323-bcff-4115-abd2-80c7ddcee325">
+                <!-- Skjult input for "Klienten forespurte" -->
+                <input type="hidden" name="Forespurte" value="Francine Mbanza Jensen">
+
+                <div class="user-details">
+                    <!-- Input for Full Name -->
+                    <div class="input-box">
+                        <span class="details">Ditt Navn</span>
+                        <input type="text" name="Navn" placeholder="Skriv ditt fulle navn" required>
+                    </div>
+                    <!-- Input for Email -->
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" name="Email" placeholder="Skriv mail-adressen din" required>
+                    </div>
+                    <!-- Input for Company -->
+                    <div class="input-box">
+                        <span class="details">Firma eller Organisasjon</span>
+                        <input type="text" name="Firma eller Organisasjon" placeholder="Skriv Firmaet du representerer" required>
+                    </div>
+                    <!-- Input for Phone Number -->
+                    <div class="input-box">
+                        <span class="details">Telefon</span>
+                        <input type="text" name="Telefonnummer" placeholder="Skriv telefonnummeret ditt" required>
+                    </div>
+                </div>
+            
+                <!-- Textarea for message -->
+                <div class="input-box">
+                    <span class="details">Melding</span>
+                    <textarea name="message" id="message" placeholder="Skriv din melding her..." required></textarea>
+                </div>
+            
+                <!-- Submit button -->
+                <div class="button">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <script src="../../JS/ProfilDefaultJS.js"></script>
+</body>

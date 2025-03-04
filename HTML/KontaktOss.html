@@ -55,42 +55,45 @@
 
             <div class="content">
                 <!-- Registration form -->
-                <form action="#">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="8dc75323-bcff-4115-abd2-80c7ddcee325">
+                
                     <div class="user-details">
                         <!-- Input for Full Name -->
                         <div class="input-box">
                             <span class="details">Ditt Navn</span>
-                            <input type="text" placeholder="Skriv ditt fulle navn" required>
+                            <input type="text" name="Name" placeholder="Skriv ditt fulle navn" required>
                         </div>
                         <!-- Input for Email -->
                         <div class="input-box">
                             <span class="details">Email</span>
-                            <input type="text" placeholder="Skriv mail-adressen din" required>
+                            <input type="email" name="Email" placeholder="Skriv mail-adressen din" required>
                         </div>
                         <!-- Input for Company -->
                         <div class="input-box">
                             <span class="details">Firma eller Organisasjon</span>
-                            <input type="text" placeholder="Skriv Firmaet du representerer" required>
+                            <input type="text" name="Firma eller Organisasjon" placeholder="Skriv Firmaet du representerer" required>
                         </div>
                         <!-- Input for Phone Number -->
                         <div class="input-box">
                             <span class="details">Telefon</span>
-                            <input type="text" placeholder="Skrvi telefonnummeret ditt" required>
+                            <input type="text" name="Telefonnummer" placeholder="Skrvi telefonnummeret ditt" required>
                         </div>
                     </div>
                     
                     <!-- Textarea for message -->
                     <div class="input-box">
-                
                         <span class="details">Melding</span>
-                        <textarea placeholder="Skriv din melding her..." required></textarea>
+                        <textarea name="message" placeholder="Skriv din melding her..." required></textarea>
                     </div>
-            
+                
                     <!-- Submit button -->
                     <div class="button">
                         <input type="submit" value="Send">
                     </div>
                 </form>
+                
 
                 Ring oss
                 <div class="phone-container">
